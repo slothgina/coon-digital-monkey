@@ -12,11 +12,27 @@ const monkeyArt = document.getElementById("monkey-art");
 function updateMonkeyFace() {
     let face = "(•_•)"; // neutral
 
-    if (mood >= 7) face = "(•‿•)";
-    else if (mood <= 2) face = "(ಠ_ಠ)";
+    // Remove all animation classes first
+    monkeyArt.classList.remove("wiggle", "shake", "glow");
+
+    // Mood-based face
+    if (mood >= 7) {
+        face = "(•‿•)";
+        monkeyArt.classList.add("wiggle", "glow"); // happy monkey wiggles + glows
+    } 
+    else if (mood <= 2) {
+        face = "(ಠ_ಠ)";
+        monkeyArt.classList.add("shake"); // stressed monkey shakes
+    }
+
+    // Hunger or energy low = shake
+    if (hunger <= 2 || energy <= 2) {
+        monkeyArt.classList.add("shake");
+    }
 
     monkeyArt.innerHTML = `🐒 ${face}\n /| |\\\n / \\`;
 }
+
 
 // --- Update stat display ---
 function updateStats() {
