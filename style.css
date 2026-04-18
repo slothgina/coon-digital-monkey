@@ -32,5 +32,40 @@ button {
   75% { transform: rotate(-2deg); }
   100% { transform: rotate(0deg); }
 }
+/* Happy wiggle */
+.wiggle {
+  animation: wiggle 0.5s infinite;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-2deg); }
+  100% { transform: rotate(0deg); }
+}
+/* Shake when stressed */
+.shake {
+  animation: shake 0.3s infinite;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
+
+/* Glow effect */
+.glow {
+  animation: glow 1.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 2px #ffd700; }
+  50% { text-shadow: 0 0 10px #ffea00; }
+  100% { text-shadow: 0 0 2px #ffd700; }
+}
 
 
