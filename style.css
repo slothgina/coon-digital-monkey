@@ -5,6 +5,12 @@ body {
     padding: 20px;
 }
 
+#monkey {
+  width: 128px;
+  image-rendering: pixelated;
+}
+
+
 #monkey-box {
     font-size: 24px;
     margin-bottom: 20px;
