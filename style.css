@@ -6,9 +6,10 @@ body {
 }
 
 #monkey-box {
-    font-size: 24px;
-    margin-bottom: 20px;
+  width: 200px;   /* or bigger */
+  height: auto;
 }
+
 
 button {
     padding: 10px 20px;
@@ -66,10 +67,11 @@ button {
   0% { text-shadow: 0 0 2px #ffd700; }
   50% { text-shadow: 0 0 10px #ffea00; }
   100% { text-shadow: 0 0 2px #ffd700; }
-}
 
 #monkey-art {
   width: 128px;
+  height: auto;
   image-rendering: pixelated;
 }
+    
 
